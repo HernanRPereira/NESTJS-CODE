@@ -17,6 +17,7 @@ export class UsersService {
   }
 
   async findAll() {
+    console.log("Return ok");
     return await this.usersModule.find({})
   }
 

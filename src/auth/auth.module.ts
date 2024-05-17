@@ -15,7 +15,7 @@ import { JwtStrategy } from './jwt.strategy';
         schema: UsersSchema,
       },
     ]),
-    JwtModule.register({
+    JwtModule.register({ // Todo JWT configuration
       global: true,
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '1h' },

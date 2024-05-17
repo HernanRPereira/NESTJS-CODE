@@ -1,6 +1,8 @@
-import { IsEmail, MaxLength, MinLength } from 'class-validator'
+import { IsEmail, IsNotEmpty, MaxLength, MinLength } from 'class-validator'
+
  
 export class LoginAuthDto {
+
     @IsEmail()
     email: string;
 
