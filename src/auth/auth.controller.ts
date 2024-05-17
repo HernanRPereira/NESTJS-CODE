@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, Get, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -19,6 +19,11 @@ export class AuthController {
   @Post('login')
   loginUser(@Body() userObjectLogin: LoginAuthDto) {
     return this.authService.login(userObjectLogin);
+  }
+
+  @Get('profile')
+  profile() {
+    return 'profile';
   }
 
 } 
